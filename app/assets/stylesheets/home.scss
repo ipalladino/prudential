@@ -1,0 +1,80 @@
+#carousel-homepage {
+   .item {
+       height:460px;
+       .carousel-caption {
+	   font-size:1em;
+       }
+       img {
+	   position:relative;
+	   top:-100px;
+       }
+       
+   }
+   .overlay {
+        background-image: -webkit-linear-gradient(bottom ,color-stop(rgba(0,0,0,.5) 0),color-stop(rgba(0,0,0,.0001) 100%));
+	background-image: linear-gradient(to top,rgba(0,0,0,.6) 0,rgba(0,0,0,.0001) 100%);
+	background-repeat: repeat-y;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+	z-index:1;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top:0px;
+   }
+   .carousel-control, .carousel-indicators {
+        z-index:2;
+   }
+   .carousel-caption {
+        z-index:2;
+   }
+   margin-bottom:30px;
+}
+
+.page-section {
+     .button-container {
+         text-align:center;
+	 vertical-align:middle;
+	 display:inline-block !important;
+	 .btn-lg {
+	      display:inline-block !important;
+	      top:40px;
+	      position:relative;
+	 }
+     }
+}
+
+.team-images {
+  margin-top:40px;
+  margin-bottom:40px;
+  > div {
+      text-align:center;
+  }
+    img {
+    	display:inline-block;
+    }
+}
+.about-icons {
+  margin-top:40px;
+  margin-bottom:40px;
+  > div {
+      text-align:center;
+  }
+    .glyphicon {
+    	display:inline-block;
+	font-size:9em;
+    }
+}
+
+footer {
+    margin-top:20px;
+    background-color:#333333;
+    color:#eeeeee;
+    padding:40px;
+    padding-bottom:0px;
+    li {
+	list-style-type:none;
+    }
+    #build {
+	font-family:monospace;
+    }
+}
