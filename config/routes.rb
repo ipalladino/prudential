@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   get 'page/index'
-  
+
   get 'page/investments'
 
   get 'page/portfolio'
+
+  get 'page/services'
 
   get 'page/contact'
 

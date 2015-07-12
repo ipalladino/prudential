@@ -22,5 +22,6 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
-  database: HEROKU_POSTGRESQL_RED
+  adapter: postgresql
+  database: prudential
+  user: ignacio
