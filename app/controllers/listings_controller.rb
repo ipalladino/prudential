@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   include SessionHelper
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  before_action :check_if_admin, only: [:create, :edit, :update, :destroy, :new]
+  before_action :check_if_admin, only: [:create, :edit, :update, :destroy, :new, :index]
 
   # GET /listings
   # GET /listings.json

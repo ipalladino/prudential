@@ -50,8 +50,10 @@
         <%= @listing.description %>
       </p>
 
-      <%= link_to 'Edit', edit_listing_path(@listing) %> |
-      <%= link_to 'Back', listings_path %>
+      <% if(is_admin?) %>
+        <%= link_to 'Edit', edit_listing_path(@listing) %> |
+        <%= link_to 'Back', listings_path %>
+      <% end %>
     </div>
   </div>
 </div>
