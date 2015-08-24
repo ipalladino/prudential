@@ -44,4 +44,4 @@ gem 'devise'
 gem 'pry-byebug'
 
 gem 'carrierwave'
-gem 'fog'
+gem 'fog-aws'
