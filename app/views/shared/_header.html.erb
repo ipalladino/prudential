@@ -18,18 +18,36 @@
               <li class="<%= if(@name=='portfolio') then 'active' end %>"><a href="/page/portfolio">Portfolio</a></li>
 	            <li class="<%= if(@name=='investments') then 'active' end %>"><a href="/page/investments">Investments</a></li>
               <li class="<%= if(@name=='services') then 'active' end %>"><a href="/page/services">Services</a></li>
-	            <li><a href="#about">Blog</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="<%= if(@name=='contact') then 'active' end %>"><a href="/page/contact">Contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Listings <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <% getListings().each do |l| %>
+                      <li><%= link_to(l.title, l) %></li>
+                  <% end %>
+                  <% if(is_admin?) %>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/listings/new">Create Listing</a></li>
+                  <% end %>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <% if(user_signed_in?) %>
+                    <li><a href="#">Manage Account</a></li>
+                    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+                  <% else %>
+                    <li><a href="/users/sign_in">Sign In</a></li>
+                    <li><a href="/users/sign_up">Sign Up (free)</a></li>
+                  <% end %>
+                  <% if(is_admin?) %>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/users">Manage Users</a></li>
+                  <% end %>
                 </ul>
               </li>
             </ul>

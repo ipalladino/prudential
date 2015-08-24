@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
+  resources :listing_attachments
+
+  resources :listings
+
+
+
   get 'page/index'
 
   get 'page/investments'
