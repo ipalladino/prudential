@@ -1,0 +1,33 @@
+// Place all the styles related to the listings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel-listing {
+  .item {
+    height:400px;
+    width:100%;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+.edit_listing {
+  textarea {
+    height:150px;
+  }
+  img {
+    max-width: 100%;
+    background-color: #ccc;
+  }
+  .images-row {
+    margin-top:20px;
+    margin-bottom:20px;
+    .actions {
+      position:absolute;
+      bottom:-1px;
+      padding:5px;
+      background-color: rgba(255,255,255, 0.7);
+      width:100%;
+    }
+  }
+}
