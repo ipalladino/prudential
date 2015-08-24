@@ -43,5 +43,5 @@ gem 'devise'
 # gem 'debugger', group: [:development, :test]
 gem 'pry-byebug'
 
-gem 'carrierwave'
-gem 'fog-aws'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem "fog-aws"
