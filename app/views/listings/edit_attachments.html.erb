@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <% @listing.listing_attachments.each do |att| %>
+      <div class="col-lg-3">
+          <img src="<%= att.listing_image.url %>" alt="" />
+          <div class="actions">
+            <span class="glyphicon glyphicon-trash"></span>
+          </div>
+      </div>
+    <% end %>
+    <form class="" action="index.html" method="post">
+      <input type="file" name="name" value="">
+      <input type="submit" name="name" value="">
+    </form>
+  </div>
+</div>
