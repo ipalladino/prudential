@@ -37,6 +37,9 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.save
+        params[:listing_attachments]['listing_attachment'].each do |l|
+           @listing_attachment = @listing.listing_attachments.create!(:listing_image => l, :listing_id => @listing.id)
+        end
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else
